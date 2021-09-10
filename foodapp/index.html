@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Food App</title>
+</head>
+
+<body>
+    <div id="navbardiv"></div>
+    <div id="inputdiv">
+        <div id="inputbox">
+            <input type="text" placeholder="Search your receipe" id="search">
+            <button id="btn">Search</button>
+        </div>
+    </div>
+    <div id="data"></div>
+</body>
+
+</html>
+<script type="module">
+    import navbar from './components/navbar.js';
+    import { getData, append } from './scripts/showdata.js';
+
+    let navdiv = document.getElementById('navbardiv');
+    let btn = document.getElementById('btn');
+    navdiv.innerHTML = navbar();
+
+    btn.onclick = function () {
+        var n = document.getElementById('search').value
+        getData(`https://www.themealdb.com/api/json/v1/1/search.php?s=${n}`)
+            .then((response) => {
+                let place = document.getElementById('data')
+                append(response, place)
+            })
+    }
+</script>
