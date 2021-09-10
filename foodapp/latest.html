@@ -13,7 +13,14 @@
 </html>
 <script type="module">
     import navbar from './components/navbar.js';
+    import { getData, append } from './scripts/showdata.js';
     let div = document.createElement('div')
     div.innerHTML = navbar();
     document.body.prepend(div);
+
+    getData(`https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast`)
+            .then((response) => {
+                let place = document.getElementById('data')
+                append(response, place)
+            })
 </script>

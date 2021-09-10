@@ -35,9 +35,9 @@ img{
 
 #data{
     margin-top: 5%;
-    display: flex;
-    grid-template-columns: repeat(4,20%);
-    gap: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,35%);
+    gap: 2%;
 }
 
 #data > div {
@@ -59,7 +59,7 @@ img{
     margin-top: 2%;
     margin-left: 30%;
     display: flex;
-    gap: 2%;
+    gap: 1%;
 }
 input{
     outline: none;
