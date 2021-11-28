@@ -77,3 +77,9 @@ button{
     color: white;
     border-radius: 6px;
 }
+
+@media (max-width:768px){
+    button {
+        width: 19%;
+    }
+}
