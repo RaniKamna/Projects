@@ -2,7 +2,7 @@
 Mini projects
 
 
-Short Mini projects on different concepts do visit and enjoy the feature
+Short Mini projects on different concepts visit and enjoy the feature
 
 [Star Wars](https://practical-kare-70af7b.netlify.app/)
 
