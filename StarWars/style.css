@@ -1,4 +1,3 @@
-
 body {
     background-image: url('https://gifimage.net/wp-content/uploads/2017/09/black-background-gif-7.gif');
 }
@@ -77,13 +76,17 @@ i{
 }
 
 #starbox > div{
-    color: rgb(255, 235, 0);
+    color: #f2f2f2;
     display: flex;
     cursor: pointer;
     height: 55px;
     align-items: center;
     flex-direction: column;
     padding: 0 24px;
+}
+
+#starbox > div :hover{
+    color: #ecd014;
 }
 
 #starbox > div > div{
@@ -94,11 +97,43 @@ i{
     justify-content: space-between;
 }
 
-p{
+#starbox > div> div p{
     margin-top: 3px;
     margin-bottom: 5px;
 }
 
 #starbox > div{
     border-top: 1px solid white;
+}
+
+h1{
+    color: #ecd014;
+}
+
+.p_detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.detail_div {
+    display: flex;
+    gap: 10px;
+}
+
+.personal_info, .anatomy {
+    border: 1px solid #ecd014;
+    padding: 5px 25px;
+    border-radius: 14px;
+    color: #ecd014;
+}
+
+.details button {
+    border: 1px solid #ecd014;
+    background-color: #050202;
+    color: #ecd014;
+    padding: 10px 15px;
+    border-radius: 12px;
+    cursor: pointer;
 }
