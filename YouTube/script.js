@@ -3,7 +3,7 @@ async function searchVideos() {
     div.innerHTML = null;
     let video = document.getElementById('video').value;
 
-    let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${video}&type=video&key=AIzaSyBjmgRNkeCgc7GK4TTJUV0DcaDzwXBC23c&maxResults=20`);
+    let res = await fetch(`https://youtube.googleapis.com/youtube/v3/search?q=${video}&type=video&key=&maxResults=20`);
     let data = await res.json();
 
     for ({
@@ -18,7 +18,7 @@ async function searchVideos() {
 }
 
 async function defaultVideo(){
-    let res = await fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=IN&key=AIzaSyBjmgRNkeCgc7GK4TTJUV0DcaDzwXBC23c&maxResults=16');
+    let res = await fetch('https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&regionCode=IN&key=&maxResults=16');
     let data = await res.json();
 
     for ({id} of data.items) {
